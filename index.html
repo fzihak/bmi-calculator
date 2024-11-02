@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>BMI Calculator</h1>
+        <p>Calculate your Body Mass Index and understand your health.</p>
+    </header>
+    
+    <section class="calculator">
+        <div class="glass-panel">
+            <h2>Calculate Your BMI</h2>
+            <div class="input-group">
+                <input type="number" id="age" placeholder="Age" min="2" max="120" required>
+                <div class="gender">
+                    <label><input type="radio" name="gender" value="male" required> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                </div>
+                <input type="number" id="height" placeholder="Height (cm)" required>
+                <input type="number" id="weight" placeholder="Weight (kg)" required>
+            </div>
+            <button onclick="calculateBMI()">Calculate BMI</button>
+            <p id="result"></p>
+            <div class="bmi-meter">
+                <div id="bmi-indicator"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bmi-chart glass-panel">
+        <h2>BMI Categories</h2>
+        <table>
+            <tr>
+                <th>BMI</th>
+                <th>Category</th>
+            </tr>
+            <tr><td>&lt; 18.5</td><td>Underweight</td></tr>
+            <tr><td>18.5 - 24.9</td><td>Normal weight</td></tr>
+            <tr><td>25 - 29.9</td><td>Overweight</td></tr>
+            <tr><td>30 or higher</td><td>Obesity</td></tr>
+        </table>
+    </section>
+
+    <section class="bmi-info glass-panel">
+        <h2>Understanding Your BMI</h2>
+        <p>Your BMI helps assess your health risks based on your height and weight. A balanced diet and regular exercise can improve BMI. Always consult a healthcare professional for personalized advice.</p>
+        <p><strong>Healthy BMI Tips:</strong> Aim to keep your BMI between 18.5 and 24.9 for optimal health. Regular physical activity and a balanced diet can help maintain this range.</p>
+    </section>
+
+    <footer>
+        <p>Developed by <a href="https://zihak.me" target="_blank">Foysal Zihak</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
